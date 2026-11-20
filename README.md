@@ -28,6 +28,14 @@
 
 (각 담당자가 기능 PR에서 사용 예시를 채웁니다.)
 
+과제 진행률 계산:
+
+```python
+from src.progress import calculate_progress
+
+print(calculate_progress(3, 4))  # 75.0
+```
+
 ## 브랜치 전략
 
 GitHub Flow를 사용합니다. 자세한 규칙은 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)를 봐 주세요.
