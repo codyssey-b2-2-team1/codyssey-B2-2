@@ -22,7 +22,7 @@
 - `calculate_progress`는 **퍼센트**를 소수점 첫째 자리까지 반올림해 반환합니다.
 - 숫자를 받는 함수는 `True`/`False`(bool)를 **허용하지 않고** `ValueError`를 냅니다. (Python에서 bool은 int로 취급되기 때문)
 - 오류는 모두 `ValueError`로 통일합니다.
-- `src/__init__.py`는 첫 PR에서 수정하지 않습니다. 주말 충돌 실습 때 함께 수정합니다.
+- `src/__init__.py`는 첫 PR에서 수정하지 않고, 충돌 실습 뒤 PR #23·#25에서 함수 노출을 추가했습니다.
 
 ## 사용 방법
 
