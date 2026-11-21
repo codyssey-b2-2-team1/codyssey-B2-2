@@ -38,6 +38,12 @@ print(format_study_time(95))                    # 1시간 35분
 print(calculate_progress(1, 3))                 # 33.3
 ```
 
+패키지 루트에서도 같은 함수를 가져올 수 있습니다.
+
+```python
+from src import calculate_average, days_until, format_study_time, calculate_progress
+```
+
 잘못된 입력은 모두 `ValueError`로 처리합니다.
 
 ```python
