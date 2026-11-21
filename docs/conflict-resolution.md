@@ -85,7 +85,7 @@ from .study_time import format_study_time
 
 - 관련 이슈: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/32
 
-- 상대 PR: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25
+- 상대 PR: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/23
 
 ### 배운 점(Learnings)
 - commit/push 수행 전에 동료들과 소통하는 것이 중요하다고 느꼈다.
