@@ -70,7 +70,7 @@ from .study_time import format_study_time
 
 ### 해결 과정(How)
 - keep both : days_until과 format_study_time 두 함수 모두 필요해서 남기기로 결정했다.
-- Pull Request에서 제공주는 화면에서 충돌 마커를 삭제하고 수정완료함.
+- Pull Request에서 제공해주는 'Resolve conflicts' 기능으로 충돌 마커를 삭제하고 수정완료함.
 
 ### 검증 결과
 - https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25/changes
