@@ -17,11 +17,11 @@
 | C: 윤정민 | `src/study_time.py` | `format_study_time(minutes)` | 분 → "N시간 M분" |
 | D: 임재홍 | `src/progress.py` | `calculate_progress(completed, total)` | 과제 진행률(%) |
 
-## 팀 합의 사항 (구현 전 확정)
+## 팀 합의 사항
 
-- `calculate_progress`는 **퍼센트**를 소수점 첫째 자리까지 반올림해 반환합니다.
+- 오류는 모두 `ValueError`로 통일하고, `"ValueError"` 문자열을 반환하는 방식은 쓰지 않습니다.
 - 숫자를 받는 함수는 `True`/`False`(bool)를 **허용하지 않고** `ValueError`를 냅니다. (Python에서 bool은 int로 취급되기 때문)
-- 오류는 모두 `ValueError`로 통일합니다.
+- 반환 형식과 반올림 자릿수는 함수마다 Issue에서 정하고, 각 함수 docstring의 예시로 확인합니다. 현재 평균은 소수 둘째 자리, 진행률은 소수 첫째 자리입니다.
 - `src/__init__.py`는 첫 PR에서 수정하지 않고, 충돌 실습 뒤 PR #23·#25에서 함수 노출을 추가했습니다.
 
 ## 사용 방법
