@@ -19,7 +19,7 @@
 
 ## 팀 합의 사항 (구현 전 확정)
 
-- `calculate_progress`는 **퍼센트**로 반환합니다. 예: `calculate_progress(3, 4)` → `75.0`
+- `calculate_progress`는 **퍼센트**를 소수점 첫째 자리까지 반올림해 반환합니다.
 - 숫자를 받는 함수는 `True`/`False`(bool)를 **허용하지 않고** `ValueError`를 냅니다. (Python에서 bool은 int로 취급되기 때문)
 - 오류는 모두 `ValueError`로 통일합니다.
 - `src/__init__.py`는 첫 PR에서 수정하지 않습니다. 주말 충돌 실습 때 함께 수정합니다.
@@ -27,6 +27,14 @@
 ## 사용 방법
 
 (각 담당자가 기능 PR에서 사용 예시를 채웁니다.)
+
+과제 진행률 계산:
+
+```python
+from src.progress import calculate_progress
+
+print(calculate_progress(1, 3))  # 33.3
+```
 
 ## 브랜치 전략
 
