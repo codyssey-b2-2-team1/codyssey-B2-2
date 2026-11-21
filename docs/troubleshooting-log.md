@@ -41,7 +41,7 @@ git ...
 
 
 
-## 시나리오: git commit --amend
+## 📌시나리오: git commit --amend
 
 push 전 개인 커밋의 메시지를 amend로 수정하고, 수정 전후 기록과 파일 내용 유지 여부를 확인했습니다.
 
@@ -105,7 +105,7 @@ git diff 결과: 출력 없음 (파일 내용 동일)
 
 
 
-## 시나리오: git reset --soft HEAD~1
+## 📌시나리오: git reset --soft HEAD~1
 
 push 전 개인 커밋을 `reset --soft HEAD~1`로 취소하고, 변경 내용은 스테이징 상태로 남긴 채 커밋 메시지를 바꿔 다시 커밋했습니다.
 
@@ -147,6 +147,13 @@ b0eb471 HEAD@{2}: commit: docs: git --reset soft HEAD~1 실습
 b4b875f HEAD@{3}: reset: moving to HEAD~1
 51a1a57 HEAD@{4}: commit: reset --soft HEAD~1 실습
 ```
+<img width="1796" height="282" alt="git log --oneline" src="https://github.com/user-attachments/assets/0be76616-43ce-459c-bb2d-2505493255e8" />
+
+<img width="2330" height="252" alt="reset실습_리셋 후" src="https://github.com/user-attachments/assets/caa411f0-9ee8-4ea4-9781-2aa1fa4ee1a0" />
+
+<img width="916" height="202" alt="리셋후_status" src="https://github.com/user-attachments/assets/72ad6d91-3b04-4250-81fa-bc8c891ab263" />
+
+<img width="1398" height="582" alt="리셋후_diff --staged" src="https://github.com/user-attachments/assets/7cc30ef4-bbce-41b9-9d03-cce589cbae33" />
 
 ### 주의점 (원격 히스토리·협업 영향)
 - push하지 않은 개인 브랜치의 커밋만 대상으로 했다. 원격에는 재커밋한 `b0eb471`만 올라가 있고 `51a1a57`은 올라간 적이 없다.
@@ -162,10 +169,10 @@ b4b875f HEAD@{3}: reset: moving to HEAD~1
 ### 증빙 링크
 - Issue: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/33
 - 실행 화면 또는 실제 명령·출력 기록: 위 수행 명령과 `git reflog` 기록
-- 관련 PR·커밋: (PR 링크 입력) / 재커밋 `b0eb471`, 취소한 커밋 `51a1a57`
+- 관련 PR·커밋: 재커밋 `b0eb471`, 취소한 커밋 `51a1a57`
 
 
-## 시나리오: git revert
+## 📌시나리오: git revert
 
 원격 브랜치에 이미 push된 잘못된 커밋을 `git revert`로 되돌리고, 히스토리를 지우지 않고 복구되는 것을 확인했습니다.
 
@@ -228,7 +235,7 @@ git push
 ![VS Code 그래프: 잘못된 커밋 위에 Revert 커밋이 쌓임](images/revert-5-graph.png)
 
 
-## 시나리오: git stash / git stash pop
+## 📌시나리오: git stash / git stash pop
 
 추적 파일 수정과 추적하지 않는 새 파일을 보관·복원하고, 같은 줄을 양쪽에서 다르게 수정해 복원 충돌을 재현한 뒤 해결·정리까지 확인했습니다.
 
