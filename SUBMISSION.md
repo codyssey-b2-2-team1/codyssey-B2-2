@@ -4,44 +4,104 @@
 
 ## Team
 
-- 팀명:
+- 팀명: codyssey-b2-2-team1
 - 팀원: 강서연(A), 김수민(B), 윤정민(C, 팀장), 임재홍(D)
 - 저장소: https://github.com/codyssey-b2-2-team1/codyssey-B2-2
 - 결과물 유형: (A) 팀원별 유틸 함수 모음
 
 ## Member Issues / PRs / Reviews
 
-### 강서연 (A)
-- Issues:
-- PRs:
-- 작성한 리뷰:
-- 리뷰 반영 커밋/답글:
+### 강서연 (A) `5312ksy-beep`
 
-### 김수민 (B)
 - Issues:
+  - [이슈 #1 팀 협업 규칙 보완](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/1)
+  - [이슈 #4 점수 평균 계산 함수 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/4)
+  - [이슈 #13 점수 평균 반올림 방식 개선](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/13)
+  - [이슈 #15 협업 규칙의 선택 사항 정리](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/15)
+  - [이슈 #18 충돌 실습 메모에 평균 함수 담당 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/18)
+  - [이슈 #26 amend 트러블슈팅 실습](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/26)
 - PRs:
+  - [PR #7 점수 평균 계산 함수 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/7)
+  - [PR #12 팀 역할과 협업 규칙 보완](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/12)
+  - [PR #14 점수 평균 계산의 반올림 방식 개선](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/14)
+  - [PR #16 브랜치 보관 허용 및 협업 규칙 제한 정리](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/16)
+  - [PR #21 충돌 실습 메모에 평균 함수 담당 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/21)
+  - [PR #28 amend 실습 결과와 증빙 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28)
 - 작성한 리뷰:
+  - [PR #11 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
+  - [PR #31 수정 요청 후 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
 - 리뷰 반영 커밋/답글:
+  - [PR #7 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/7) 후 후속 PR #14로 반올림 방식 개선
 
-### 윤정민 (C)
-- Issues:
-- PRs:
-- 작성한 리뷰:
-- 리뷰 반영 커밋/답글:
+### 김수민 (B) `cody2620`
 
-### 임재홍 (D)
 - Issues:
+  - [이슈 #8 마감일까지 남은 날짜 계산하기](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/8)
+  - [이슈 #22 `__init__.py`에 days_until 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/22)
+  - [이슈 #32 비자명 충돌 해결 실습](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/32)
+  - [이슈 #33 `git reset HEAD~1` 트러블슈팅](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/33)
 - PRs:
+  - [PR #9 마감일까지 남은 날짜 계산하기 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/9)
+  - [PR #25 `__init__.py`에 days_until 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25)
+  - [PR #30 충돌 실습 2회차 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/30)
 - 작성한 리뷰:
+  - [PR #7 리뷰 코멘트·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/7)
+  - [PR #12 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/12)
+  - [PR #14 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/14)
+  - [PR #16 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/16)
+  - [PR #23 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/23)
 - 리뷰 반영 커밋/답글:
+  - PR #9·#25·#30에 작성자 답글 기록이 없다. 리뷰 반영 여부는 후속 커밋으로 보완이 필요하다.
+
+### 윤정민 (C, 팀장) `yj-min-i`
+
+- Issues:
+  - [이슈 #2 초기 폴더 구조와 공통 양식](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/2)
+  - [이슈 #3 공부 시간 변환 함수](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/3)
+  - [이슈 #19 `__init__.py`에 format_study_time 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/19)
+  - [이슈 #29 git revert 트러블슈팅](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/29)
+- PRs:
+  - [PR #5 초기 폴더 구조와 템플릿](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
+  - [PR #6 공부 시간 변환 함수](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
+  - [PR #23 `__init__.py`에 format_study_time 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/23)
+- 작성한 리뷰:
+  - [PR #9 리뷰 코멘트·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/9)
+  - [PR #25 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25)
+  - [PR #28 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28)
+  - [PR #30 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/30)
+- 리뷰 반영 커밋/답글:
+  - [PR #6 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)과 반올림 수정 커밋 `35dd4aa`
+
+### 임재홍 (D) `sarguments`
+
+- Issues:
+  - [이슈 #10 과제 진행률 계산 함수 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/10)
+  - [이슈 #17 README와 제출 증빙 정리](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/17)
+  - [이슈 #20 충돌 실습 메모에 진행률 함수 담당 추가 및 충돌 해결](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/20)
+  - [이슈 #27 stash/pop 트러블슈팅 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/27)
+- PRs:
+  - [PR #11 과제 진행률 계산 함수 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
+  - [PR #24 충돌 실습 메모에 진행률 함수 담당 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/24)
+  - [PR #31 stash/pop 트러블슈팅 기록 작성](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
+- 작성한 리뷰:
+  - [PR #5 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
+  - [PR #6 코드 줄 근거 리뷰·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
+  - [PR #21 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/21)
+- 리뷰 반영 커밋/답글:
+  - [PR #11 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
+  - [PR #31 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)과 반영 커밋 `934153a`
 
 ## Key Docs
 
 - Contributing: [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
 - Conflict log: [docs/conflict-resolution.md](docs/conflict-resolution.md)
 - Troubleshooting: [docs/troubleshooting-log.md](docs/troubleshooting-log.md)
+- 파일별 사용 예시: [README.md](README.md)
 
 ## Evidence
 
-- git log: (docs/git-log.txt 또는 스크린샷 위치)
+- git log: [docs/git-log.txt](docs/git-log.txt) (`git log --oneline --graph --all --decorate`, 2026-11-21 생성)
 - 충돌 PR:
+  - 1회차 `docs/team-practice.md` 동시 추가: [PR #21](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/21) 병합 후 [PR #24](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/24)에서 재현·해결
+  - 2회차 `src/__init__.py` 같은 위치 import 충돌: [PR #30](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/30)
+- 트러블슈팅 기록: `amend` [PR #28](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28), `stash`/`pop` [PR #31](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)

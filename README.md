@@ -26,21 +26,34 @@
 
 ## 사용 방법
 
-(각 담당자가 기능 PR에서 사용 예시를 채웁니다.)
-
-과제 진행률 계산:
-
 ```python
+from src.scores import calculate_average
+from src.deadlines import days_until
+from src.study_time import format_study_time
 from src.progress import calculate_progress
 
-print(calculate_progress(1, 3))  # 33.3
+print(calculate_average([88, 91, 95]))          # 91.33
+print(days_until("2026-11-25", "2026-11-20"))   # 5
+print(format_study_time(95))                    # 1시간 35분
+print(calculate_progress(1, 3))                 # 33.3
+```
+
+잘못된 입력은 모두 `ValueError`로 처리합니다.
+
+```python
+calculate_average([])                  # ValueError: 빈 목록
+days_until("2026-02-30", "2026-11-20") # ValueError: 존재하지 않는 날짜
+format_study_time(90.5)                # ValueError: 정수가 아님
+calculate_progress(4, 3)               # ValueError: 완료 수가 전체보다 큼
 ```
 
 ## 브랜치 전략
 
 GitHub Flow를 사용합니다. 자세한 규칙은 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)를 봐 주세요.
 
-(GitHub Flow를 선택한 이유 3줄 — 담당자가 PR로 작성)
+- `main`은 항상 동작하는 상태로 두고, 작업마다 Issue와 `feature/이름-작업` 브랜치를 따로 만듭니다.
+- 모든 변경은 PR로 올려 다른 팀원 1명 이상의 리뷰와 승인을 받은 뒤 병합합니다.
+- 작은 단위로 자주 병합해 충돌 범위를 줄이고, 병합된 브랜치는 정리합니다.
 
 ## 문서
 
