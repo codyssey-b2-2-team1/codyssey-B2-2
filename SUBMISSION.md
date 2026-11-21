@@ -29,6 +29,7 @@
   - [PR #28 amend 실습 결과와 증빙 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28)
 - 작성한 리뷰:
   - [PR #11 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
+  - [PR #24 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/24)
   - [PR #31 수정 요청 후 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
   - [PR #34 수정 요청 후 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/34)
   - [PR #37 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/37)
@@ -67,6 +68,7 @@
   - [이슈 #3 공부 시간 변환 함수](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/3)
   - [이슈 #19 `__init__.py`에 format_study_time 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/19)
   - [이슈 #29 git revert 트러블슈팅](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/29)
+  - [이슈 #36 협업 규칙과 보호 규칙 증빙 정리](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/36)
 - PRs:
   - [PR #5 초기 폴더 구조와 템플릿](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
   - [PR #6 공부 시간 변환 함수](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
