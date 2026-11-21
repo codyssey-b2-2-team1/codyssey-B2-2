@@ -5,4 +5,5 @@
 """
 
 # --- 함수 import (주말 충돌 실습 지점) ---
+from .deadlines import days_until
 from .study_time import format_study_time
