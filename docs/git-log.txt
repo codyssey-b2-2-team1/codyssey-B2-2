@@ -1,63 +1,80 @@
-*   5d0c383 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #38 from codyssey-b2-2-team1/feature/sumin-trouble-reset
+*   bc32a3a (HEAD -> main, origin/main, origin/HEAD) Merge pull request #39 from codyssey-b2-2-team1/feature/jaehong-submission-docs
 |\  
-| * 864fb5f (origin/feature/sumin-trouble-reset) docs: 실습 캡쳐 추가
-| * 1c501e0 docs: 트러블 슈팅 작성
-| *   3687e5d Merge remote-tracking branch 'origin/main' into feature/sumin-trouble-reset
+| * 46fa9b8 (origin/feature/jaehong-submission-docs) docs: 제출 인덱스에 누락된 리뷰와 이슈 추가
+| * 1c61e58 fix: 달력에 없는 날짜를 형식 오류와 같은 메시지로 처리하도록 복구
+| * 511626a docs: 최종 이력 기준 git 로그와 제출 증빙 갱신
+| *   fab0b38 Merge remote-tracking branch 'origin/main' into feature/jaehong-submission-docs
 | |\  
-| * | 73b9aa7 docs: 트러블슈팅 기록 작성
-| * | b0eb471 docs: git --reset soft HEAD~1 실습
-* | |   eb82ba8 Merge pull request #37 from codyssey-b2-2-team1/feature/jeongmin-contributing-update
+| |/  
+|/|   
+* |   5d0c383 Merge pull request #38 from codyssey-b2-2-team1/feature/sumin-trouble-reset
+|\ \  
+| * | 864fb5f (origin/feature/sumin-trouble-reset) docs: 실습 캡쳐 추가
+| * | 1c501e0 docs: 트러블 슈팅 작성
+| * |   3687e5d Merge remote-tracking branch 'origin/main' into feature/sumin-trouble-reset
+| |\ \  
+| * | | 73b9aa7 docs: 트러블슈팅 기록 작성
+| * | | b0eb471 docs: git --reset soft HEAD~1 실습
+* | | |   eb82ba8 Merge pull request #37 from codyssey-b2-2-team1/feature/jeongmin-contributing-update
+|\ \ \ \  
+| |_|/ /  
+|/| | |   
+| * | | 9c8f58e (origin/feature/jeongmin-contributing-update) docs: CONTRIBUTING 병합 규칙·충돌 실습 기록 수정 및 main 보호 규칙 증빙 추가
+|/ / /  
+* | |   8baef9c Merge pull request #34 from codyssey-b2-2-team1/feature/jeongmin-troubleshoot-revert
 |\ \ \  
-| |_|/  
+| |/ /  
 |/| |   
-| * | 9c8f58e (origin/feature/jeongmin-contributing-update) docs: CONTRIBUTING 병합 규칙·충돌 실습 기록 수정 및 main 보호 규칙 증빙 추가
-|/ /  
-* |   8baef9c Merge pull request #34 from codyssey-b2-2-team1/feature/jeongmin-troubleshoot-revert
-|\ \  
-| |/  
-|/|   
-| * 0064fb9 (origin/feature/jeongmin-troubleshoot-revert) docs: revert 기록 주의점 표현 수정 (리뷰 반영)
-| *   64b36dc Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
-| |\  
-| |/  
-|/|   
-* |   b4b875f Merge pull request #31 from codyssey-b2-2-team1/feature/jaehong-stash-log
-|\ \  
-| * \   9af3fe4 (origin/feature/jaehong-stash-log) merge: 최신 main 변경 반영 및 stash 기록 통합
+| * | 0064fb9 (origin/feature/jeongmin-troubleshoot-revert) docs: revert 기록 주의점 표현 수정 (리뷰 반영)
+| * |   64b36dc Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
 | |\ \  
 | |/ /  
 |/| |   
-* | |   5ddb4c6 Merge pull request #30 from codyssey-b2-2-team1/cody2620-confilct-log-2
+| * | e814f0a docs: 트러블슈팅 로그에 revert 기록 본문 추가
+| * | 1a58b27 docs: 트러블슈팅 로그에 git revert 시나리오 기록
+| * |   11f8833 Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
+| |\ \  
+| * | | c6f04b4 Revert "feat: 공부 시간 표기를 영어 단위로 변경"
+| * | | a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
+| | | * db3cd19 docs: README에 패키지 루트 import 예시 추가
+| | | * a28f2d7 feat: __init__.py에 calculate_average와 calculate_progress 노출 추가
+| | | * 21c503a docs: README에 doctest 실행 방법 추가
+| | | * 93ed17f docs: README 팀 합의 사항을 함수별 세부 대신 공통 규칙으로 정리
+| | | * 7770924 docs: 제출 인덱스 리뷰 반영 링크 정정과 git 로그 갱신 절차 명시
+| | | * 4159807 docs: README 사용 예시와 제출 인덱스 링크 정리
+| |_|/  
+|/| |   
+* | |   b4b875f Merge pull request #31 from codyssey-b2-2-team1/feature/jaehong-stash-log
 |\ \ \  
+| * \ \   9af3fe4 (origin/feature/jaehong-stash-log) merge: 최신 main 변경 반영 및 stash 기록 통합
+| |\ \ \  
+| |/ / /  
+|/| | |   
+* | | |   5ddb4c6 Merge pull request #30 from codyssey-b2-2-team1/cody2620-confilct-log-2
+|\ \ \ \  
+| |_|_|/  
+|/| | |   
 | * | | dae8d03 (origin/cody2620-confilct-log-2) Update conflict-resolution.md
 | * | | d1585a8 Update conflict-resolution.md
 | * | | ba738e6 Update conflict-resolution.md
 | * | | 94856bd 충돌실습2 기록 작성
-| | * | 934153a docs: stash 충돌 해결 절차와 drop 정리 기준 보완
-| | * | e0f2bfc docs: stash/pop 트러블슈팅 기록 작성
-| | | * e814f0a docs: 트러블슈팅 로그에 revert 기록 본문 추가
-| | | * 1a58b27 docs: 트러블슈팅 로그에 git revert 시나리오 기록
-| | | *   11f8833 Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
-| | | |\  
-| |_|_|/  
-|/| | |   
-* | | |   b2b5263 Merge pull request #28 from codyssey-b2-2-team1/feature/seoyeon-amend
-|\ \ \ \  
-| |/ / /  
-|/| | |   
-| | | * c6f04b4 Revert "feat: 공부 시간 표기를 영어 단위로 변경"
-| | | * a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
-| |_|/  
+| | |/  
+| |/|   
+* | |   b2b5263 Merge pull request #28 from codyssey-b2-2-team1/feature/seoyeon-amend
+|\ \ \  
+| |/ /  
 |/| |   
 * | |   0a5624f Merge pull request #25 from codyssey-b2-2-team1/feature/sumin-conflict-init-export
 |\ \ \  
+| * \ \   5c629b0 (origin/feature/sumin-conflict-init-export) Merge branch 'main' into feature/sumin-conflict-init-export
+| |\ \ \  
+| |/ / /  
+|/| | |   
+| * | | 7a86c98 feat: __init__.py에 days_until 노출
+| | | * 934153a docs: stash 충돌 해결 절차와 drop 정리 기준 보완
+| | | * e0f2bfc docs: stash/pop 트러블슈팅 기록 작성
 | |_|/  
 |/| |   
-| * |   5c629b0 (origin/feature/sumin-conflict-init-export) Merge branch 'main' into feature/sumin-conflict-init-export
-| |\ \  
-| |/ /  
-|/| |   
-| * | 7a86c98 feat: __init__.py에 days_until 노출
 | | | * 0178553 (origin/feature/seoyeon-amend) docs: 트러블슈팅 공통 양식 안내 문구 수정
 | | |/  
 | | * ea6a6c1 docs: 트러블슈팅 공통 기록 양식을 상단으로 이동
