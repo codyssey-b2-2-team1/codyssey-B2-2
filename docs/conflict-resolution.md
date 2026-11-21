@@ -51,12 +51,12 @@
 ## 📌 충돌 기록 2회차
 
 ### 참여자
-- 작성자: 김수민(cody2620)
-- 상대: 윤정민(yj-min-i)
+- 작성자: 김수민(`cody2620`)
+- 상대: 윤정민(`yj-min-i`)
 
 ### 상황(What happened)
-- 충돌 발생 브랜치: feature/sumin-conflict-init-export와 feature/jeongmin-init-export
-- 충돌 발생 파일: _init_.py
+- 충돌 발생 브랜치: `feature/sumin-conflict-init-export`와 `feature/jeongmin-init-export`
+- 충돌 발생 파일: `src/__init__.py`
 
 ### 충돌 내용(Conflict markers)
 ```txt
@@ -69,12 +69,23 @@ from .study_time import format_study_time
 <img width="2834" height="892" alt="비자명 충돌 기록" src="https://github.com/user-attachments/assets/24b8d6d4-d1cc-4777-b3e1-c827b9b34a45" />
 
 ### 해결 과정(How)
-- keep both : 두 함수 모두 필요해서 남기기로 결정했다.
-- Pull Request에서 제공하주는 화면에서 충돌 마커를 삭제하고 수정완료함.
+- keep both : days_until과 format_study_time 두 함수 모두 필요해서 남기기로 결정했다.
+- Pull Request에서 제공주는 화면에서 충돌 마커를 삭제하고 수정완료함.
 
-### 결과(Outcome)
-- days_until과 format_study_time 모두 사용하기로 했다.
+### 검증 결과
 - https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25/changes
+  <img width="2168" height="396" alt="검증결과" src="https://github.com/user-attachments/assets/de337136-2e50-4962-95b4-a4d98b28d84c" />
+
+### 증빙 링크 (PR/커밋)
+- 해결 PR: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25
+- 충돌 재현 화면
+<img width="2834" height="892" alt="비자명 충돌 기록" src="https://github.com/user-attachments/assets/24b8d6d4-d1cc-4777-b3e1-c827b9b34a45" />
+
+- 해결 커밋: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/commit/5c629b0f735f6ac11b6a3937ec133003947582bf
+
+- 관련 이슈: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/32
+
+- 상대 PR: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25
 
 ### 배운 점(Learnings)
 - commit/push 수행 전에 동료들과 소통하는 것이 중요하다고 느꼈다.
