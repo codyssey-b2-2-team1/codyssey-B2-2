@@ -1,8 +1,20 @@
 """마감일 관련 함수 모음."""
 
 import re
-import sys
-from datetime import date, datetime
+from datetime import datetime
+
+
+def _parse_date(value):
+    """``YYYY-MM-DD`` 형식의 문자열을 ``date``로 변환한다.
+
+    잘못된 입력이면 입력값을 포함한 메시지로 ``ValueError``를 발생시킨다.
+    """
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError(f"잘못된 날짜 입력입니다: {value!r}")
+    try:
+        return datetime.strptime(value, "%Y-%m-%d").date()
+    except ValueError:
+        raise ValueError(f"잘못된 날짜 입력입니다: {value!r}") from None
 
 
 def days_until(due_date, base_date):
@@ -25,36 +37,24 @@ def days_until(due_date, base_date):
     >>> days_until("2026-02-30", "2026-11-20")
     Traceback (most recent call last):
         ...
-    ValueError: 잘못된 날짜 입력입니다.
+    ValueError: 잘못된 날짜 입력입니다: '2026-02-30'
     >>> days_until("2026/11/25", "2026-11-20")
     Traceback (most recent call last):
         ...
-    ValueError: 잘못된 날짜 입력입니다.
+    ValueError: 잘못된 날짜 입력입니다: '2026/11/25'
     >>> days_until("2026-1-5", "2026-11-20")
     Traceback (most recent call last):
         ...
-    ValueError: 잘못된 날짜 입력입니다.
+    ValueError: 잘못된 날짜 입력입니다: '2026-1-5'
     >>> days_until("2026-11-25", "2026-13-01")
     Traceback (most recent call last):
         ...
-    ValueError: 잘못된 날짜 입력입니다.
+    ValueError: 잘못된 날짜 입력입니다: '2026-13-01'
     >>> days_until(None, "2026-11-20")
     Traceback (most recent call last):
         ...
-    ValueError: 잘못된 날짜 입력입니다.
+    ValueError: 잘못된 날짜 입력입니다: None
     """
-    if not isinstance(due_date, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", due_date):
-        raise ValueError("잘못된 날짜 입력입니다.")
-    try:
-        due = datetime.strptime(due_date, "%Y-%m-%d").date()
-    except ValueError:
-        raise ValueError("잘못된 날짜 입력입니다.")
-
-    if not isinstance(base_date, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", base_date):
-        raise ValueError("잘못된 날짜 입력입니다.")
-    try:
-        base = datetime.strptime(base_date, "%Y-%m-%d").date()
-    except ValueError:
-        raise ValueError("잘못된 날짜 입력입니다.")
-
+    due = _parse_date(due_date)
+    base = _parse_date(base_date)
     return (due - base).days
