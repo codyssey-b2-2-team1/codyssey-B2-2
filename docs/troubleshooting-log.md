@@ -103,4 +103,64 @@ git diff 결과: 출력 없음 (파일 내용 동일)
 
 ![amend 실행 전후 커밋 번호와 메시지 비교](images/amend-before-after.png)
 
+## 시나리오: git revert
 
+원격 브랜치에 이미 push된 잘못된 커밋을 `git revert`로 되돌리고, 히스토리를 지우지 않고 복구되는 것을 확인했습니다.
+
+### 참여자·역할
+- 윤정민(`yj-min-i`): 실행 및 기록
+
+### 상황·재현 절차
+- 시작 상태와 문제가 생긴 상황: `src/study_time.py`의 반환 형식을 `"N시간 M분"`에서 `"Nh Mm"`으로 잘못 바꾼 커밋을 원격 브랜치에 push했다. 그 결과 docstring 사용 예시(doctest)가 실패했다.
+- 실습 브랜치: `feature/jeongmin-troubleshoot-revert`
+- 재현 절차:
+  1. 최신 main에서 브랜치 생성
+  2. `return f"{hours}시간 {remaining}분"` → `return f"{hours}h {remaining}m"`으로 수정
+  3. `python3 -m doctest src/study_time.py` 실행 → 실패 확인
+  4. 커밋 후 push → 이미 원격에 공유된 상태
+
+### 수행 명령
+```bash
+git commit -am "feat: 공부 시간 표기를 영어 단위로 변경"
+git push -u origin feature/jeongmin-troubleshoot-revert
+git log --oneline -3
+git revert HEAD --no-edit
+git log --oneline -3
+python3 -m doctest src/study_time.py -v
+git push
+```
+
+### 결과
+- 실행 전 상태:
+  ```text
+  a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
+  0a5624f Merge pull request #25 from codyssey-b2-2-team1/feature/sumin-conflict-init-export
+  5c629b0 Merge branch 'main' into feature/sumin-conflict-init-export
+  ```
+- 실행 후 상태:
+  ```text
+  c6f04b4 Revert "feat: 공부 시간 표기를 영어 단위로 변경"
+  a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
+  0a5624f Merge pull request #25 from codyssey-b2-2-team1/feature/sumin-conflict-init-export
+  ```
+- 파일·커밋·브랜치에 생긴 변화: 잘못된 커밋 `a0ebff3`은 기록에 그대로 남고, 그 변경을 취소하는 새 커밋 `c6f04b4`가 추가됐다. `src/study_time.py`는 원래 코드로 돌아왔고 doctest 7개가 다시 통과했다. push는 강제 옵션 없이 일반 `git push`로 완료됐다.
+
+### 주의점 (원격 히스토리·협업 영향)
+- 이미 push한 커밋을 `reset`으로 지우면 원격과 히스토리가 달라져 강제 push가 필요하고, 그 커밋을 받은 팀원의 기록과 어긋난다.
+- `revert`는 새 커밋을 추가할 뿐이라 일반 push로 끝나고, 다른 팀원 작업에 영향을 주지 않는다.
+- 되돌린 뒤 바로 다른 브랜치(main)를 pull하면 맨 위가 병합 커밋이 되므로, revert는 pull 전에 실행했다. 병합 커밋을 되돌려야 할 때는 `git revert -m 1 <병합 커밋>`처럼 기준 부모를 지정해야 한다.
+
+### 이 방법을 선택한 이유
+- 잘못된 커밋이 이미 원격에 공유된 상태라, 히스토리를 지우는 `reset` 대신 기록을 보존하는 `revert`를 선택했다. 무엇을 왜 되돌렸는지가 커밋으로 남아 추적도 쉽다.
+
+### 증빙 링크
+- Issue: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/29
+- 잘못된 커밋: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/commit/a0ebff32eb124209be56a8f04d0142bdc7537759
+- revert 커밋: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/commit/c6f04b4eadfdbf42982bda1cb60b85a15a39da0f
+- 실행 화면:
+
+![잘못된 변경으로 doctest 실패](images/revert-1-doctest-fail.png)
+![revert 전 커밋 로그](images/revert-2-log-before.png)
+![revert 후 커밋 로그](images/revert-3-log-after.png)
+![revert 후 doctest 7개 통과](images/revert-4-doctest-pass.png)
+![VS Code 그래프: 잘못된 커밋 위에 Revert 커밋이 쌓임](images/revert-5-graph.png)
