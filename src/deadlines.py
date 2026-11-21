@@ -11,12 +11,10 @@ def _parse_date(value):
     """
     if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
         raise ValueError(f"잘못된 날짜 입력입니다: {value!r}")
-    return datetime.strptime(value, "%Y-%m-%d").date()
-
-    # try:
-    #     return datetime.strptime(value, "%Y-%m-%d").date()
-    # except ValueError:
-    #     raise ValueError(f"잘못된 날짜 입력입니다: {value!r}") from None
+    try:
+        return datetime.strptime(value, "%Y-%m-%d").date()
+    except ValueError:
+        raise ValueError(f"잘못된 날짜 입력입니다: {value!r}") from None
 
 
 def days_until(due_date, base_date):
