@@ -9,6 +9,24 @@
 - 저장소: https://github.com/codyssey-b2-2-team1/codyssey-B2-2
 - 결과물 유형: (A) 팀원별 유틸 함수 모음
 
+## 저장소 권한과 옵션 선택
+
+- 선택한 옵션: **A. GitHub Organization 저장소** — 저장소 소유자가 개인이 아니라 조직 `codyssey-b2-2-team1`이고, 팀 저장소는 1개입니다.
+- 팀 구성: 4명 모두 조직 멤버입니다.
+- 저장소 권한: 4명 모두 협업 가능 권한(write 이상)으로 참여합니다.
+
+| 팀원 | GitHub | 저장소 권한 |
+| --- | --- | --- |
+| 윤정민 (팀장) | `yj-min-i` | admin |
+| 강서연 | `5312ksy-beep` | write |
+| 김수민 | `cody2620` | write |
+| 임재홍 | `sarguments` | write |
+
+- 확인 방법(2026-11-21):
+  - 조직 멤버: `gh api orgs/codyssey-b2-2-team1/members` → `5312ksy-beep`, `cody2620`, `sarguments`, `yj-min-i`
+  - 저장소 권한: `gh api "repos/codyssey-b2-2-team1/codyssey-B2-2/collaborators?affiliation=all"` → 위 표와 동일
+  - 조직 초대 이력 화면은 관리자만 볼 수 있어, 조직 멤버 목록과 저장소 권한 응답으로 대신 확인했습니다.
+
 ## Member Issues / PRs / Reviews
 
 ### 강서연 (A) `5312ksy-beep`
@@ -96,6 +114,7 @@
   - [PR #11 과제 진행률 계산 함수 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
   - [PR #24 충돌 실습 메모에 진행률 함수 담당 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/24)
   - [PR #31 stash/pop 트러블슈팅 기록 작성](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
+  - [PR #39 README·제출 증빙 정리와 누락 함수 노출, 마감일 오류 처리 복구](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/39)
 - 작성한 리뷰:
   - [PR #5 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
   - [PR #6 코드 줄 근거 리뷰·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
@@ -116,7 +135,7 @@
 ## Evidence
 
 - git log: [docs/git-log.txt](docs/git-log.txt) (`git log --oneline --graph --all --decorate`, 2026-11-21 생성)
-  - 원격 저장소 기준으로 생성했습니다(2026-11-21, PR #38 병합 시점). 이 PR의 병합 커밋은 포함되지 않습니다.
+  - 원격 저장소 기준으로 생성했습니다(2026-11-21, `main` `bc32a3a`, PR #39 병합 이후).
   - 이후 이력이 바뀌면 아래 명령으로 다시 만듭니다.
 
     ```bash
