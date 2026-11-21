@@ -1,4 +1,4 @@
-"""공부 시간 변환 — 담당: C(윤정민)."""
+"""공부 시간(분)을 "N시간 M분" 형식의 문자열로 바꾸는 함수."""
 
 
 def format_study_time(minutes):
@@ -44,4 +44,7 @@ def format_study_time(minutes):
 
 
 if __name__ == "__main__":
-    print(format_study_time(95))  # 1시간 35분
+    # 직접 실행하면 docstring의 사용 예시(doctest)를 테스트한다.
+    import doctest
+
+    doctest.testmod(verbose=True)
