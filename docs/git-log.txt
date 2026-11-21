@@ -1,41 +1,63 @@
-* 1a58b27 (origin/feature/jeongmin-troubleshoot-revert) docs: 트러블슈팅 로그에 git revert 시나리오 기록
-*   11f8833 Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
+*   5d0c383 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #38 from codyssey-b2-2-team1/feature/sumin-trouble-reset
 |\  
-* | c6f04b4 Revert "feat: 공부 시간 표기를 영어 단위로 변경"
-* | a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
-| | *   b4b875f (HEAD -> feature/jaehong-submission-docs, origin/main, origin/feature/sumin-trouble-reset, origin/HEAD, main) Merge pull request #31 from codyssey-b2-2-team1/feature/jaehong-stash-log
-| | |\  
-| | | *   9af3fe4 (origin/feature/jaehong-stash-log, feature/jaehong-stash-log) merge: 최신 main 변경 반영 및 stash 기록 통합
-| | | |\  
-| | | |/  
-| | |/|   
-| | * | 5ddb4c6 Merge pull request #30 from codyssey-b2-2-team1/cody2620-confilct-log-2
-| |/| | 
-| | * | dae8d03 (origin/cody2620-confilct-log-2) Update conflict-resolution.md
-| | * | d1585a8 Update conflict-resolution.md
-| | * | ba738e6 Update conflict-resolution.md
-| | * | 94856bd 충돌실습2 기록 작성
-| |/ /  
-|/| |   
-| * | b2b5263 Merge pull request #28 from codyssey-b2-2-team1/feature/seoyeon-amend
-|/| | 
-* | |   0a5624f Merge pull request #25 from codyssey-b2-2-team1/feature/sumin-conflict-init-export
+| * 864fb5f (origin/feature/sumin-trouble-reset) docs: 실습 캡쳐 추가
+| * 1c501e0 docs: 트러블 슈팅 작성
+| *   3687e5d Merge remote-tracking branch 'origin/main' into feature/sumin-trouble-reset
+| |\  
+| * | 73b9aa7 docs: 트러블슈팅 기록 작성
+| * | b0eb471 docs: git --reset soft HEAD~1 실습
+* | |   eb82ba8 Merge pull request #37 from codyssey-b2-2-team1/feature/jeongmin-contributing-update
 |\ \ \  
-| * \ \   5c629b0 (origin/feature/sumin-conflict-init-export) Merge branch 'main' into feature/sumin-conflict-init-export
-| |\ \ \  
-| |/ / /  
-|/| | |   
-| * | | 7a86c98 feat: __init__.py에 days_until 노출
-| | | * 934153a docs: stash 충돌 해결 절차와 drop 정리 기준 보완
-| | | | *   c22bf28 WIP on stash-resolve-test: 5e50079 test: stash 복원 충돌 재현
-| | | | |\  
-| | | | | * c0d87f9 index on stash-resolve-test: 5e50079 test: stash 복원 충돌 재현
-| | | | |/  
-| | | | * 5e50079 test: stash 복원 충돌 재현
-| | | |/  
-| | | * e0f2bfc docs: stash/pop 트러블슈팅 기록 작성
 | |_|/  
 |/| |   
+| * | 9c8f58e (origin/feature/jeongmin-contributing-update) docs: CONTRIBUTING 병합 규칙·충돌 실습 기록 수정 및 main 보호 규칙 증빙 추가
+|/ /  
+* |   8baef9c Merge pull request #34 from codyssey-b2-2-team1/feature/jeongmin-troubleshoot-revert
+|\ \  
+| |/  
+|/|   
+| * 0064fb9 (origin/feature/jeongmin-troubleshoot-revert) docs: revert 기록 주의점 표현 수정 (리뷰 반영)
+| *   64b36dc Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
+| |\  
+| |/  
+|/|   
+* |   b4b875f Merge pull request #31 from codyssey-b2-2-team1/feature/jaehong-stash-log
+|\ \  
+| * \   9af3fe4 (origin/feature/jaehong-stash-log) merge: 최신 main 변경 반영 및 stash 기록 통합
+| |\ \  
+| |/ /  
+|/| |   
+* | |   5ddb4c6 Merge pull request #30 from codyssey-b2-2-team1/cody2620-confilct-log-2
+|\ \ \  
+| * | | dae8d03 (origin/cody2620-confilct-log-2) Update conflict-resolution.md
+| * | | d1585a8 Update conflict-resolution.md
+| * | | ba738e6 Update conflict-resolution.md
+| * | | 94856bd 충돌실습2 기록 작성
+| | * | 934153a docs: stash 충돌 해결 절차와 drop 정리 기준 보완
+| | * | e0f2bfc docs: stash/pop 트러블슈팅 기록 작성
+| | | * e814f0a docs: 트러블슈팅 로그에 revert 기록 본문 추가
+| | | * 1a58b27 docs: 트러블슈팅 로그에 git revert 시나리오 기록
+| | | *   11f8833 Merge branch 'main' of https://github.com/codyssey-b2-2-team1/codyssey-B2-2 into feature/jeongmin-troubleshoot-revert
+| | | |\  
+| |_|_|/  
+|/| | |   
+* | | |   b2b5263 Merge pull request #28 from codyssey-b2-2-team1/feature/seoyeon-amend
+|\ \ \ \  
+| |/ / /  
+|/| | |   
+| | | * c6f04b4 Revert "feat: 공부 시간 표기를 영어 단위로 변경"
+| | | * a0ebff3 feat: 공부 시간 표기를 영어 단위로 변경
+| |_|/  
+|/| |   
+* | |   0a5624f Merge pull request #25 from codyssey-b2-2-team1/feature/sumin-conflict-init-export
+|\ \ \  
+| |_|/  
+|/| |   
+| * |   5c629b0 (origin/feature/sumin-conflict-init-export) Merge branch 'main' into feature/sumin-conflict-init-export
+| |\ \  
+| |/ /  
+|/| |   
+| * | 7a86c98 feat: __init__.py에 days_until 노출
 | | | * 0178553 (origin/feature/seoyeon-amend) docs: 트러블슈팅 공통 양식 안내 문구 수정
 | | |/  
 | | * ea6a6c1 docs: 트러블슈팅 공통 기록 양식을 상단으로 이동
@@ -47,7 +69,7 @@
 |/|   
 * |   84fc750 Merge pull request #24 from codyssey-b2-2-team1/feature/jaehong-conflict-add
 |\ \  
-| * | 48c60ec (origin/feature/jaehong-conflict-add, feature/jaehong-conflict-add) docs: 충돌 기록 제목에서 이슈 자동 링크 제거
+| * | 48c60ec (origin/feature/jaehong-conflict-add) docs: 충돌 기록 제목에서 이슈 자동 링크 제거
 | * | 55a8fd1 docs: 실습 메모 동시 추가 충돌 해결 및 기록
 | |\| 
 | * | 8019f8a docs: 충돌 실습 메모에 진행률 함수 담당 추가
@@ -63,14 +85,14 @@
 |/|   
 | * c2647d9 (origin/feature/seoyeon-conflict-add) docs: 충돌 실습 메모에 평균 함수 담당 추가
 |/  
-*   e1e8d5b (feature/jaehong-submission) Merge pull request #16 from codyssey-b2-2-team1/feature/seoyeon-guide-policy
+*   e1e8d5b Merge pull request #16 from codyssey-b2-2-team1/feature/seoyeon-guide-policy
 |\  
 | * 2aa0e61 (origin/feature/seoyeon-guide-policy) docs: 브랜치 보관 허용 및 협업 규칙 제한 정리
 * |   29981db Merge pull request #11 from codyssey-b2-2-team1/feature/jaehong-progress
 |\ \  
 | |/  
 |/|   
-| *   f060b04 (origin/feature/jaehong-progress, feature/jaehong-progress) merge: 최신 main 변경 반영
+| *   f060b04 (origin/feature/jaehong-progress) merge: 최신 main 변경 반영
 | |\  
 | |/  
 |/|   
@@ -89,7 +111,7 @@
 |\ \ \ \ \  
 | |_|/ / /  
 |/| | | |   
-| * | | | d510392 (origin/feature/seoyeon-contributing, feature/seoyeon-contributing) docs: 팀 역할과 협업 규칙 보완
+| * | | | d510392 (origin/feature/seoyeon-contributing) docs: 팀 역할과 협업 규칙 보완
 * | | | |   b26f058 Merge pull request #7 from codyssey-b2-2-team1/feature/seoyeon-average
 |\ \ \ \ \  
 | |_|/ / /  
@@ -106,7 +128,7 @@
 | |/ /  
 |/| /   
 | |/    
-| * 7debfb8 (origin/feature/jeongmin-initial-structure, feature/jeongmin-initial-structure) chore: 초기 폴더 구조와 문서·PR·Issue 템플릿 추가
+| * 7debfb8 (origin/feature/jeongmin-initial-structure) chore: 초기 폴더 구조와 문서·PR·Issue 템플릿 추가
 |/  
 * 0942861 chore: set up initial folder structure and doc templates
 * 22fe7c6 Initial commit

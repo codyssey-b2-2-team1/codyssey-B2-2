@@ -30,6 +30,8 @@
 - 작성한 리뷰:
   - [PR #11 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11)
   - [PR #31 수정 요청 후 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
+  - [PR #34 수정 요청 후 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/34)
+  - [PR #37 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/37)
 - 리뷰 반영 커밋/답글:
   - [PR #28 리뷰 스레드 답글 3건](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28)과 증빙·양식 보완
   - [PR #7 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/7)
@@ -46,6 +48,7 @@
   - [PR #9 마감일까지 남은 날짜 계산하기 추가](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/9)
   - [PR #25 `__init__.py`에 days_until 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25)
   - [PR #30 충돌 실습 2회차 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/30)
+  - [PR #38 `reset --soft HEAD~1` 트러블슈팅 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/38)
 - 작성한 리뷰:
   - [PR #7 리뷰 코멘트·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/7)
   - [PR #12 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/12)
@@ -68,6 +71,8 @@
   - [PR #5 초기 폴더 구조와 템플릿](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
   - [PR #6 공부 시간 변환 함수](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
   - [PR #23 `__init__.py`에 format_study_time 노출](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/23)
+  - [PR #34 git revert 트러블슈팅 기록](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/34)
+  - [PR #37 협업 규칙·충돌 실습 기록 수정과 보호 규칙 증빙](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/37)
 - 작성한 리뷰:
   - [PR #9 리뷰 코멘트·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/9)
   - [PR #25 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/25)
@@ -76,6 +81,7 @@
 - 리뷰 반영 커밋/답글:
   - [PR #6 리뷰 스레드 답글 2건](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)과 수정 커밋 `81102f9`
   - [PR #23 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/23)
+  - [PR #34 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/34)과 주의점 표현 수정 커밋 `0064fb9`
 
 ### 임재홍 (D) `sarguments`
 
@@ -92,6 +98,8 @@
   - [PR #5 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/5)
   - [PR #6 코드 줄 근거 리뷰·승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/6)
   - [PR #21 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/21)
+  - [PR #37 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/37)
+  - [PR #38 승인](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/38)
 - 리뷰 반영 커밋/답글:
   - [PR #11 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/11#issuecomment-7058604665)
   - [PR #31 리뷰 답글](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31#issuecomment-7060178203)과 반영 커밋 `934153a`
@@ -106,7 +114,8 @@
 ## Evidence
 
 - git log: [docs/git-log.txt](docs/git-log.txt) (`git log --oneline --graph --all --decorate`, 2026-11-21 생성)
-  - 이 파일은 임시본입니다. 트러블슈팅 2종(`reset --soft`·`revert`)을 포함한 모든 PR이 `main`에 병합된 뒤 아래 명령으로 다시 만들어 갱신합니다.
+  - 원격 저장소 기준으로 생성했습니다(2026-11-21, PR #38 병합 시점). 이 PR의 병합 커밋은 포함되지 않습니다.
+  - 이후 이력이 바뀌면 아래 명령으로 다시 만듭니다.
 
     ```bash
     git switch main && git pull --ff-only
@@ -115,5 +124,8 @@
 - 충돌 PR:
   - 1회차 `docs/team-practice.md` 동시 추가: [PR #21](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/21) 병합 후 [PR #24](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/24)에서 재현·해결
   - 2회차 `src/__init__.py` 같은 위치 import 충돌: [PR #30](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/30)
-- 트러블슈팅 기록: `amend` [PR #28](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28), `stash`/`pop` [PR #31](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
-- 트러블슈팅 진행 중: `reset --soft` [이슈 #33](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/33), `revert` [이슈 #29](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/29) (2026-11-21 기준 병합 전)
+- 트러블슈팅 4종 기록(모두 `main` 병합 완료)
+  - `amend`: [PR #28](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28)
+  - `stash`/`pop`: [PR #31](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/31)
+  - `revert`: [PR #34](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/34)
+  - `reset --soft`: [PR #38](https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/38)
