@@ -29,6 +29,10 @@ git stash
 sed -i '' 's/^- 강서연: 점수 평균 계산 함수 담당$/- 강서연: 점수 평균 전용 함수 담당/' docs/team-practice.md
 git commit -am "test: stash 복원 충돌 재현"
 git stash pop
+
+# 3) 충돌 해결과 마무리
+git add docs/team-practice.md
+git stash drop
 ```
 
 ### 결과
@@ -44,9 +48,12 @@ git stash pop
 - 임재홍: 과제 진행률 계산 함수 담당
 ```
 - 함께 출력된 메시지: `CONFLICT (content): Merge conflict in docs/team-practice.md`, `The stash entry is kept in case you need it again.`
+- 충돌 해결: 두 변경을 모두 살려 그 줄을 `- 강서연: 점수 평균·중앙값 계산 전용 함수 담당`으로 합치고, `<<<<<<<`·`=======`·`>>>>>>>` 세 줄을 지웠다. 최종 파일에는 `- 임재홍: 과제 진행률 계산 함수 담당` 줄이 그대로 남았다.
+- 마무리: `git add docs/team-practice.md`로 해결을 표시하고 `git stash drop`을 실행해 `Dropped refs/stash@{0} (d0cdf2af…)`를 확인했다. `git status --short`는 `M  docs/team-practice.md`, `git stash list`는 비어 있었다.
 
 ### 주의점 (원격 히스토리·협업 영향)
-- 충돌한 `pop`은 stash를 지우지 않는다. 정리하지 않으면 stash가 계속 쌓이므로 `git stash drop` 또는 `git stash clear`로 지운다.
+- 충돌한 `pop`은 stash를 지우지 않는다. 마커를 제거하고 `git add`로 해결한 뒤 `git stash drop`으로 그 항목만 지운다. `git stash clear`는 다른 작업의 stash까지 모두 지우므로 쓰지 않는다.
+- `git stash list`로 남은 항목을 먼저 확인하고, 지울 때는 `drop`처럼 대상 하나를 지정한다.
 - `-u` 없이 보관하면 새 파일이 워킹트리에 남아 브랜치를 바꿔도 따라간다. 새 파일까지 정리하려면 `-u`를 쓴다.
 - 실습은 push하지 않은 임시 브랜치에서만 했고, 공유 브랜치 이력은 바꾸지 않았다. 실습 커밋은 브랜치 삭제로 사라졌다.
 
