@@ -1,9 +1,17 @@
 """학생용 학습 도우미 함수 모음.
 
-이 파일은 첫 PR에서 수정하지 않습니다.
-주말 충돌 실습 때 각자 아래 자리에 자기 함수 import 한 줄을 추가합니다.
+네 담당 함수를 패키지 루트에서 바로 가져올 수 있게 노출한다.
+충돌 실습은 PR #23·#25에서 끝났고, 남은 두 함수는 이 파일에서 함께 노출한다.
 """
 
-# --- 함수 import (주말 충돌 실습 지점) ---
 from .deadlines import days_until
+from .progress import calculate_progress
+from .scores import calculate_average
 from .study_time import format_study_time
+
+__all__ = [
+    "calculate_average",
+    "days_until",
+    "format_study_time",
+    "calculate_progress",
+]

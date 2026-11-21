@@ -17,30 +17,57 @@
 | C: 윤정민 | `src/study_time.py` | `format_study_time(minutes)` | 분 → "N시간 M분" |
 | D: 임재홍 | `src/progress.py` | `calculate_progress(completed, total)` | 과제 진행률(%) |
 
-## 팀 합의 사항 (구현 전 확정)
+## 팀 합의 사항
 
-- `calculate_progress`는 **퍼센트**를 소수점 첫째 자리까지 반올림해 반환합니다.
+- 오류는 모두 `ValueError`로 통일하고, `"ValueError"` 문자열을 반환하는 방식은 쓰지 않습니다.
 - 숫자를 받는 함수는 `True`/`False`(bool)를 **허용하지 않고** `ValueError`를 냅니다. (Python에서 bool은 int로 취급되기 때문)
-- 오류는 모두 `ValueError`로 통일합니다.
-- `src/__init__.py`는 첫 PR에서 수정하지 않습니다. 주말 충돌 실습 때 함께 수정합니다.
+- 반환 형식과 반올림 자릿수는 함수마다 Issue에서 정하고, 각 함수 docstring의 예시로 확인합니다. 현재 평균은 소수 둘째 자리, 진행률은 소수 첫째 자리입니다.
+- `src/__init__.py`는 첫 PR에서 수정하지 않고, 충돌 실습 뒤 PR #23·#25에서 함수 노출을 추가했습니다.
 
 ## 사용 방법
 
-(각 담당자가 기능 PR에서 사용 예시를 채웁니다.)
-
-과제 진행률 계산:
-
 ```python
+from src.scores import calculate_average
+from src.deadlines import days_until
+from src.study_time import format_study_time
 from src.progress import calculate_progress
 
-print(calculate_progress(1, 3))  # 33.3
+print(calculate_average([88, 91, 95]))          # 91.33
+print(days_until("2026-11-25", "2026-11-20"))   # 5
+print(format_study_time(95))                    # 1시간 35분
+print(calculate_progress(1, 3))                 # 33.3
+```
+
+패키지 루트에서도 같은 함수를 가져올 수 있습니다.
+
+```python
+from src import calculate_average, days_until, format_study_time, calculate_progress
+```
+
+잘못된 입력은 모두 `ValueError`로 처리합니다.
+
+```python
+calculate_average([])                  # ValueError: 빈 목록
+days_until("2026-02-30", "2026-11-20") # ValueError: 존재하지 않는 날짜
+format_study_time(90.5)                # ValueError: 정수가 아님
+calculate_progress(4, 3)               # ValueError: 완료 수가 전체보다 큼
+```
+
+## 확인 방법
+
+각 함수의 docstring 예시는 doctest로 실행할 수 있습니다.
+
+```bash
+python3 -m doctest -v src/scores.py src/deadlines.py src/study_time.py src/progress.py
 ```
 
 ## 브랜치 전략
 
 GitHub Flow를 사용합니다. 자세한 규칙은 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)를 봐 주세요.
 
-(GitHub Flow를 선택한 이유 3줄 — 담당자가 PR로 작성)
+- `main`은 항상 동작하는 상태로 두고, 작업마다 Issue와 `feature/이름-작업` 브랜치를 따로 만듭니다.
+- 모든 변경은 PR로 올려 다른 팀원 1명 이상의 리뷰와 승인을 받은 뒤 병합합니다.
+- 작은 단위로 자주 병합해 충돌 범위를 줄이고, 병합된 브랜치는 정리합니다.
 
 ## 문서
 
