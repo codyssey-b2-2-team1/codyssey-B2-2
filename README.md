@@ -47,6 +47,14 @@ format_study_time(90.5)                # ValueError: 정수가 아님
 calculate_progress(4, 3)               # ValueError: 완료 수가 전체보다 큼
 ```
 
+## 확인 방법
+
+각 함수의 docstring 예시는 doctest로 실행할 수 있습니다.
+
+```bash
+python3 -m doctest -v src/scores.py src/deadlines.py src/study_time.py src/progress.py
+```
+
 ## 브랜치 전략
 
 GitHub Flow를 사용합니다. 자세한 규칙은 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)를 봐 주세요.
