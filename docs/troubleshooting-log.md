@@ -56,4 +56,4 @@ git diff 결과: 출력 없음 (파일 내용 동일)
 ### 증빙 링크
 - Issue: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/26
 - 수정 전후 실행 증빙: 위 수행 명령, 실제 커밋 번호와 실행 로그 요약
-- 관련 PR: 생성 후 추가
+- 관련 PR: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/pull/28
