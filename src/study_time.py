@@ -40,7 +40,7 @@ def format_study_time(minutes):
         raise ValueError(f"minutes는 0 이상이어야 합니다: {minutes}")
 
     hours, remaining = divmod(minutes, 60)
-    return f"{hours}h {remaining}m"
+    return f"{hours}시간 {remaining}분"
 
 
 if __name__ == "__main__":
