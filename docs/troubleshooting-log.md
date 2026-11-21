@@ -41,7 +41,7 @@ git ...
 
 
 
-## 시나리오: git commit --amend
+## 📌시나리오: git commit --amend
 
 push 전 개인 커밋의 메시지를 amend로 수정하고, 수정 전후 기록과 파일 내용 유지 여부를 확인했습니다.
 
@@ -104,7 +104,75 @@ git diff 결과: 출력 없음 (파일 내용 동일)
 ![amend 실행 전후 커밋 번호와 메시지 비교](images/amend-before-after.png)
 
 
-## 시나리오: git revert
+
+## 📌시나리오: git reset --soft HEAD~1
+
+push 전 개인 커밋을 `reset --soft HEAD~1`로 취소하고, 변경 내용은 스테이징 상태로 남긴 채 커밋 메시지를 바꿔 다시 커밋했습니다.
+
+### 참여자·역할
+- 김수민(`cody2620`): 실행 및 기록
+
+### 상황·재현 절차
+- 시작 상태와 실습 목적: src/deadlines.py의 _parse_date에서 try/except를 주석 처리한 변경을 reset --soft HEAD~1 실습이라는 메시지로 커밋한 뒤, git reset --soft HEAD~1로 마지막 커밋만 취소하고 변경 내용이 스테이징 상태로 남는지 확인하는 실습이다.
+- 실습 브랜치: `feature/sumin-trouble-reset` (`main`의 `b4b875f`에서 분기)
+- 재현 절차:
+  1. `src/deadlines.py`를 수정하고 `reset --soft HEAD~1 실습` 메시지로 커밋한다. (`51a1a57`)
+  2. `git reset --soft HEAD~1`로 커밋만 취소한다.
+  3. `git status`로 변경이 스테이징된 상태로 남아 있는지 확인한다.
+  4. 같은 변경을 `docs: git --reset soft HEAD~1 실습` 메시지로 다시 커밋한다. (`b0eb471`)
+
+### 수행 명령
+```bash
+git commit -am "reset --soft HEAD~1 실습"
+git log -1 --oneline
+git reset --soft HEAD~1
+git status --short
+git commit -m "docs: git --reset soft HEAD~1 실습"
+git log -1 --oneline
+git reflog -5
+```
+
+### 결과
+- 실행 전 상태: `HEAD`는 `51a1a57 reset --soft HEAD~1 실습`, 부모는 `b4b875f`.
+- 실행 후 상태: `HEAD`가 `b4b875f`로 이동했고, `51a1a57`의 변경(`src/deadlines.py`, 6줄 추가·4줄 삭제)은 스테이징 영역(`M  src/deadlines.py`)에 그대로 남았다.
+- 파일·커밋·브랜치에 생긴 변화:
+  - 재커밋 후 새 커밋 `b0eb471 docs: git --reset soft HEAD~1 실습`이 만들어졌다.
+  - `git diff --stat 51a1a57 b0eb471`은 출력이 없어 두 커밋의 파일 내용이 같고, 커밋 번호와 메시지만 달라졌다.
+  - 브랜치는 그대로이며 `51a1a57`은 브랜치에서 빠져 reflog에만 남는다.
+
+실제 `git reflog` 기록:
+
+```text
+b0eb471 HEAD@{2}: commit: docs: git --reset soft HEAD~1 실습
+b4b875f HEAD@{3}: reset: moving to HEAD~1
+51a1a57 HEAD@{4}: commit: reset --soft HEAD~1 실습
+```
+<img width="1796" height="282" alt="git log --oneline" src="https://github.com/user-attachments/assets/0be76616-43ce-459c-bb2d-2505493255e8" />
+
+<img width="2330" height="252" alt="reset실습_리셋 후" src="https://github.com/user-attachments/assets/caa411f0-9ee8-4ea4-9781-2aa1fa4ee1a0" />
+
+<img width="916" height="202" alt="리셋후_status" src="https://github.com/user-attachments/assets/72ad6d91-3b04-4250-81fa-bc8c891ab263" />
+
+<img width="1398" height="582" alt="리셋후_diff --staged" src="https://github.com/user-attachments/assets/7cc30ef4-bbce-41b9-9d03-cce589cbae33" />
+
+### 주의점 (원격 히스토리·협업 영향)
+- push하지 않은 개인 브랜치의 커밋만 대상으로 했다. 원격에는 재커밋한 `b0eb471`만 올라가 있고 `51a1a57`은 올라간 적이 없다.
+- 이미 push한 커밋에 `reset`을 쓰면 로컬과 원격 이력이 갈라져 강제 push가 필요하고, 그 커밋을 기준으로 작업하던 팀원과 이력이 어긋난다. 공유 브랜치에서는 쓰지 않고 `revert`를 사용한다.
+- `--soft`는 파일과 스테이징을 건드리지 않지만, `--hard`는 작업 내용을 지운다. 옵션을 확인하고 실행한다.
+- 취소한 커밋 번호는 `git reflog`로 찾을 수 있으니 실행 전 번호를 기록해 둔다.
+
+### 이 방법을 선택한 이유
+- 변경 내용은 그대로 두고 최근 커밋만 취소해 메시지와 커밋 단위를 다시 정리하기 위해 사용한다.
+- `--mixed`는 스테이징까지 풀고 `--hard`는 변경을 삭제하므로, 같은 내용을 바로 재커밋하는 이번 상황에는 `--soft`가 맞다.
+- 메시지만 바꾸는 경우라면 `amend`로 충분하지만, 이번에는 커밋 취소 후 스테이징 상태 확인까지 실습하는 것이 목적이었다.
+
+### 증빙 링크
+- Issue: https://github.com/codyssey-b2-2-team1/codyssey-B2-2/issues/33
+- 실행 화면 또는 실제 명령·출력 기록: 위 수행 명령과 `git reflog` 기록
+- 관련 PR·커밋: 재커밋 `b0eb471`, 취소한 커밋 `51a1a57`
+
+
+## 📌시나리오: git revert
 
 원격 브랜치에 이미 push된 잘못된 커밋을 `git revert`로 되돌리고, 히스토리를 지우지 않고 복구되는 것을 확인했습니다.
 
@@ -167,7 +235,7 @@ git push
 ![VS Code 그래프: 잘못된 커밋 위에 Revert 커밋이 쌓임](images/revert-5-graph.png)
 
 
-## 시나리오: git stash / git stash pop
+## 📌시나리오: git stash / git stash pop
 
 추적 파일 수정과 추적하지 않는 새 파일을 보관·복원하고, 같은 줄을 양쪽에서 다르게 수정해 복원 충돌을 재현한 뒤 해결·정리까지 확인했습니다.
 
