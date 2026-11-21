@@ -29,6 +29,18 @@
   - PR과 리뷰로 변경 의도와 검증 결과를 공유할 수 있습니다.
   - 검증된 변경만 합쳐 main을 항상 실행·사용 가능한 상태로 유지할 수 있습니다.
 
+## main 보호 규칙
+
+- 대상: `main` (Settings → Branches → Branch protection rules)
+- Require a pull request before merging, Require approvals 1
+- Require conversation resolution before merging
+- Do not allow bypassing the above settings (관리자 포함)
+- 로컬 설정: `git config --global pull.rebase false` — pull 시 병합 방식으로 통일해 "divergent branches" 오류를 방지합니다.
+
+![main 브랜치 보호 대상과 PR·승인 1명 설정](images/branch-protection-1-pattern.png)
+![대화 해결 필수와 우회 금지 설정](images/branch-protection-2-rules.png)
+![보호 규칙으로 main 직접 커밋이 막힌 화면](images/branch-protection-3-blocked.png)
+
 ## 작업 단위
 
 - 목적이 하나이고 독립적으로 검토·검증할 수 있는 변경 하나 = Issue 1개 = 브랜치 1개 = PR 1개.
@@ -47,13 +59,15 @@
 - type: `feat`(기능), `fix`(수정), `docs`(문서), `refactor`(구조 개선), `chore`(설정·기타)
 - 예: `feat: 점수 평균 계산 함수 추가`
 - 금지: `update`, `fix`, `wip`, `완료`처럼 대상이 불분명한 메시지만 쓰기
+- GitHub 웹에서 편집하거나 충돌을 해결할 때도 기본 메시지(`Update 파일명`, `Merge branch ...`)를 그대로 쓰지 않고 위 형식으로 바꿉니다.
 
 ## PR 규칙
 
 - 본문에 What·Why·How와 `Closes #실제번호` 포함 (PR 템플릿 사용)
-- 다른 팀원 1명 이상 승인 + 리뷰 의견 처리 후, PR 작성자가 병합
+- 다른 팀원 1명 이상 승인 + 리뷰 의견 처리 + 모든 리뷰 대화 Resolve 후, PR 작성자 또는 승인한 리뷰어가 병합합니다. 병합 방식은 `Create a merge commit`을 사용합니다.
 - 공유 브랜치의 기록 재작성, 합의 없는 강제 push·리베이스 금지
 - 관리 권한이 있는 팀원도 main 보호 규칙을 우회하지 않습니다.
+- 같은 파일의 import 목록을 수정할 때는 모듈 이름 알파벳 순서로 정렬하고 파일 끝에 개행을 남겨 불필요한 충돌을 줄입니다.
 - PR에 실제로 확인한 입력·절차, 기대 결과와 실제 결과를 기록합니다. 문서 변경은 링크·경로·요구 항목·Markdown 표시를 확인합니다.
 - 본문 양식은 `.github/pull_request_template.md`를 따르며, 자리표시자를 실제 내용과 Issue 번호로 바꿉니다.
 
@@ -74,7 +88,7 @@
 - 해결 후 충돌 마커를 제거하고 관련 함수·문서를 검증합니다. 해결 커밋을 올리고 리뷰어가 확인합니다.
 - 기록 항목: 참여자, 시작 커밋·브랜치·파일, 재현 절차, 충돌 내용, 수행 명령·해결 절차, 선택 이유, 검증 결과, PR·커밋 링크, 배운 점.
 - 팀 전체 최소 2회 기록을 남기며, 최소 1회는 같은 파일의 같은 hunk(인접 구간) 수정 또는 이동·이름 변경·삭제와 내용 수정이 겹치는 비자명 충돌 조건을 충족합니다.
-- 실습 계획: 강서연·김수민 1회, 윤정민·임재홍 1회. 대상 구간과 시점은 대면 때 함께 정합니다.
+- 실습 결과: 임재홍·강서연 1회(같은 경로에 각자 파일을 추가한 add/add 충돌, #21 → #24), 김수민·윤정민 1회(`src/__init__.py` 같은 구간 수정, #23 → #25). 상세 기록은 `docs/conflict-resolution.md`를 따릅니다.
 - 같은 구간의 충돌이 반복되면 담당 범위, PR 크기, 브랜치 유지 기간과 병합 순서를 조정합니다.
 
 ## 구현·검증 공통 기준
